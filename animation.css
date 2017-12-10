@@ -1,0 +1,48 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto auto auto 3fr;
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: orange;
+}
+
+#button {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#box1 {
+    background-color: red;
+    transition-delay: 0;
+}
+
+#box2 {
+    background-color: white;
+    transition-delay: 0.1s;
+}
+
+#box3 {
+    background-color: blue;
+    transition-delay: 0.2s;
+}
+
+.box {
+    grid-column: 1;
+    width: 20em;
+    height: 10em;
+    -webkit-transition: transform .4s ease-out;
+    -moz-transition: transform .4s ease-out;
+    transition: transform .4s cubic-bezier(.11,.33,.76,1.35);
+}
+
+.box--slide-out {
+    transform: translateX(-18em);
+}
